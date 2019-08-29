@@ -1,2 +1,6 @@
-<h1>{{ title }}</h1>
-<h2>The name of the animal is: {{ name }} {{ lastname }}</h2>
+{% extends 'layouts/master.html.twig' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h2>The name of the animal is: {{ name }} {{ lastname }}</h2>
+{% endblock %}

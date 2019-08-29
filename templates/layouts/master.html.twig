@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+       {% block title %} Start {% endblock %} - Master -
+    </title>
+</head>
+    <body>
+
+        <div id="header">
+            {% block header %}
+                <h1>Cabezera de la Plantilla</h1>
+                <hr>
+            {% endblock %}
+        </div>
+
+        <section id="content">
+            {% block content %}
+                <p>Contenido por Defecto</p>
+                <hr>
+            {% endblock %}
+        </section>
+
+        <footer>
+            {% block footer %}
+                <p>Pie de pagina</p>
+                <hr>
+            {% endblock %}
+        </footer>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
