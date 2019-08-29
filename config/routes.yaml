@@ -1,3 +1,20 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /index
+    controller: App\Controller\HomeController::index
+
+# Para la variable opcional se puede usar el signo ?, pero mejor usar
+# la propiedad defaults y asiganarle un valor por defecto.
+animals:
+    path: /animals/{name}/{lastname} # {name?}
+    controller: App\Controller\HomeController::animals
+    defaults: {name: 'Default - Horse', lastname: 'Rivera'}
+    methods: [POST, GET] # Para indicarle el método que se desee utilizar.
+    requirements: # Restricciones o requerimientos de las variables.
+        name: '[a-zA-Z ]+' # Expresiones regulares.
+        lastname: '[a-zA-Z ]+' # '[0-9]+' Para solo expresiones numericas.
+        # Tener en cuenta que la expresión con el espacio al final, lo toma
+        # como una condición más.
+
+redire:
+    path: /redire
+    controller: App\Controller\HomeController::redire
