@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     public function index(){
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'hello' => 'Helo World with Symfony 4',
+            'hello' => 'Hello World with Symfony 4',
         ]);
     }
 
